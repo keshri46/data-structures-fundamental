@@ -21,5 +21,9 @@ class ArrayOne {
          */
 
         //NewLine added from github web
+
+        //NewLine added from Intellij terminal
+
+
     }
 }
