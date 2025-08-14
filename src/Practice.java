@@ -4,6 +4,7 @@ public class Practice {
         practiceArrays.findMax();
         practiceArrays.findEvenOdd();
         practiceArrays.reverseArray();
+        practiceArrays.findSecondMax();
     }
 }
 
@@ -47,4 +48,27 @@ class PracticeArrays {
         }
         printArray(reverseArray);
     }
+    void findSecondMax() {
+        int max = arr[0];
+        int secondMax = Integer.MIN_VALUE;
+        boolean foundSecondMax = false;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                secondMax = max;
+                max = arr[i];
+                foundSecondMax = true;
+            } else if (arr[i] > secondMax && arr[i] < max) {
+                secondMax = arr[i];
+                foundSecondMax = true;
+            }
+        }
+
+        if(foundSecondMax) {
+            System.out.println("Second Largest: " + secondMax);
+        } else {
+            System.out.println("No second largest element found.");
+        }
+    }
+
 }
